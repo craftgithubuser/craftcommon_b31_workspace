@@ -17,15 +17,8 @@ public class HashMapDemo1 {
 //	    System.out.println(hm.get("c"));
 	    
 		// Traversing HashMap
-		// For-each
 	    Set<Map.Entry<String,Integer>> st = hm.entrySet();
-	    
-	    for(Map.Entry<String,Integer> me:st)
-	    {
-	      System.out.print(me.getKey()+":");
-	      System.out.println(me.getValue());
-	    }
-	    
+  
 	    System.out.println("\n Using Iterator Interface: ");
 	    
 	    //Iterator - interface
