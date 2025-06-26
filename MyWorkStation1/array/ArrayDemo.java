@@ -6,7 +6,7 @@ public class ArrayDemo {
 		// TODO Auto-generated method stub
 
 		
-		String[] nameOfCustomers = new String[6];// array declaration
+		String[] nameOfCustomers = new String[7];// array declaration
 		
 		// set array elements // or put values using index the index startes from 0
 		
@@ -16,6 +16,7 @@ public class ArrayDemo {
 		nameOfCustomers[3] = "Zerihun";
 		nameOfCustomers[4] = "Melat";
 		nameOfCustomers[5] = "Zinash";
+		nameOfCustomers[6] = "Ashenafi";
 		
 		for(int i=0; i<nameOfCustomers.length; i++) {
 			System.out.println(nameOfCustomers[i]);
