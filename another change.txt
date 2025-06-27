@@ -1,0 +1,16 @@
+creating remote repository - on GitHub
+download or clone remote repo to local machine - using git clone command
+
+we follow three stage work flow:
+1. making a change on the local repo -- modification - by creating a new file , by modifying -update existing file, by delete existing files
+2. track the change  -- staging or indexing
+3. saving the tracked change to local repo - committing
+4. pushing or notifying the change we made to the local repo to remote repo -- using push command
+
+
+Tracking the change using three stage workflow
+
+1, modifiy ---> making a change
+2, staging ---> tracking the change/the modification using --> git add .
+3, commit to local repository ---> git commit -m "the message"
+4, pushing to remote repository
