@@ -1,0 +1,156 @@
+create database craftsoftware;
+
+create database crafthospital;
+
+use crafthospital;
+
+create table patients (
+   patientId int,
+   fullname varchar(255),
+   fullname varchar(255),
+   age int,
+   patientDob date,
+   address text,
+   phone text,
+   gender varchar(255)
+);
+
+
+create table nurses (
+   nurseId int primary key,
+   fullname varchar(255) not null,
+   age int not null,
+   patientDob date,
+   address text,
+   phone text unique,
+   gender varchar(255) unique
+);
+
+CREATE TABLE Students (
+    PersonID INT,
+    LastName varchar(255) Not null ,
+    FirstName varchar(255) Not null,
+    Address varchar(255),
+    City varchar(255) not null
+);
+
+
+CREATE TABLE userstable (
+   userid int primary key,
+   name varchar(255),
+   age varchar(255),
+   address varchar(255),
+   check (age>=45 and address="Ethiopia")
+);
+
+
+CREATE TABLE Craft (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+Alter table Craft 
+Add Unique (ID);
+
+CREATE TABLE Soresa (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+Alter table Soresa 
+Add Constraint Id_of_craft Unique (ID);
+
+Alter table soresa
+Drop index Id_of_craft;
+
+CREATE TABLE CraftPerson (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255)
+);
+
+Alter table CraftPerson
+Add constraint age_check Check(age>18);
+
+Alter table CraftPerson
+Drop Check age_check;
+
+Alter table CraftPerson
+Rename column age to craftage;
+
+
+CREATE TABLE teachers (
+   userid int primary key,
+   name varchar(255),
+   age varchar(255),
+   address varchar(255) default "Ethiopia"
+);
+
+Alter table teachers
+modify column age int;
+
+CREATE TABLE Doctors (
+    DoctorId INT unique,
+    LastName varchar(255) Not null,
+    FirstName varchar(255) Not null,
+    Address varchar(255),
+    City varchar(255) not null
+);
+
+Alter table craftdoctors 
+Add Unique (Address);
+
+
+Alter table doctors
+rename column LastName to lname;
+
+Alter table doctors
+rename to craftdoctors;
+
+Alter table doctors
+modify column Address text;
+
+CREATE TABLE tiktokusers (
+   fullname varchar(255),
+   username varchar(255) not null unique,
+   password varchar(255),
+   phone varchar(255) unique
+);
+
+create table instructors (
+    instructorid int primary key,
+    fullname varchar(255) not null,
+    age int,
+    instructorcourse varchar(255) not null,
+    address varchar(255) default 'Ethiopia',
+    dob date,
+    check (age>16)
+);
+
+Alter table instructors
+modify fullname varchar(255) null;
+
+drop database craftsoftware;
+drop table doctors;
+drop table tiktokusers;
+
+
+Alter table instructors
+add column gender varchar(255);
+
+Alter table instructors
+add column salary double not null;
+
+Alter table instructors
+drop column dob;
+
+Alter table instructors
+Rename column address to instructoraddress;
+
+
+
