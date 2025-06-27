@@ -1,0 +1,32 @@
+package Calculator;
+
+import java.util.Scanner;
+
+public class CdCalculator {
+
+    public static void runtwo(Scanner sc) {
+        System.out.println("\n💰 CD Calculator");
+
+        System.out.print("Enter initial deposit: ");
+        double p = sc.nextDouble();
+
+        System.out.print("Enter annual interest rate (%): ");
+        double r = sc.nextDouble() / 100;
+
+        System.out.print("Enter term length in years: ");
+        double t = sc.nextDouble();
+
+        double FV = p * Math.pow(1 + r / 365, 365 * t);
+        double interest = FV - p;
+
+        System.out.printf("Future value:      $%.2f%n", FV);
+        System.out.printf("Interest earned:   $%.2f%n", interest);
+
+        // DO NOT close the scanner here
+    }
+}
+    
+
+
+		
+		
