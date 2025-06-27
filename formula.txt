@@ -1,0 +1,23 @@
+package InfantFormulacalculator;
+
+import java.util.*;
+
+public class infantFor { 
+	public static void main(String[] args) { 
+		float formula;
+		 float weight;
+		     
+		
+		
+		
+		Scanner sc =  new Scanner(System.in);
+		System.out.println("please inter the weight 0f the infant in lb" );
+		weight = sc.nextFloat();
+		
+		formula = (float) (weight*2.5)/6;
+		
+		System.out.println("recommended infant formula every three  to four hours is:" + formula + "oz");
+		
+	}
+
+}
