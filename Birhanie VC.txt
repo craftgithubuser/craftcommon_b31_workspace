@@ -1,0 +1,1 @@
+Version control is a system that tracks changes to files over time, primarily used in software development to manage code, but also applicable to other types of documents. It allows teams to collaborate, track modifications, and revert to previous versions, ensuring code integrity and efficient workflow.
