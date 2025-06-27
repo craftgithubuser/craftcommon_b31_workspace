@@ -1,0 +1,22 @@
+i got screwed up as usual.lol
+
+
+
+
+guys my status was locked through the process.. but its fixed.. if any one on my situation this was the solution
+
+#!/bin/bash
+LOCK_FILE=".git/index.lock"
+
+if [ -f "$LOCK_FILE" ]; then
+    echo "⚠️ Lock file found: $LOCK_FILE"
+    echo "Removing it now..."
+    rm -f "$LOCK_FILE"
+    echo "✅ Lock file removed. You can now run Git commands."
+else
+    echo "✅ No lock file found. You're good to go!"
+fi
+
+
+
+
