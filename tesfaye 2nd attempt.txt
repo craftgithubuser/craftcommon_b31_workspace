@@ -1,1 +1,27 @@
-hi this is my 2nd attempt
+hi this is my 2nd attempt import java.util.Scanner;
+
+public class MortgageCalculator {
+
+    public static void run(Scanner sc) {
+        System.out.println("\n🏠 Mortgage Calculator");
+
+        System.out.print("Enter loan amount (principal): ");
+        double p = sc.nextDouble();
+
+        System.out.print("Enter annual interest rate (%): ");
+        double I = sc.nextDouble();
+
+        System.out.print("Enter loan term in years: ");
+        int L = sc.nextInt();
+
+        double i = I / 100 / 12;
+        double n = 12 * L;
+        double M = p * (i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
+        double totalInterest = M * n - p;
+
+        System.out.printf("Your monthly payment: $%.2f%n", M);
+        System.out.printf("Total interest paid:  $%.2f%n", totalInterest);
+    }
+}
+
+        // DO NOT close the scanner here
