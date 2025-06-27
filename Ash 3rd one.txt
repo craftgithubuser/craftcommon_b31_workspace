@@ -15,3 +15,19 @@ git status// to check if it is UpToDate or not
 
 
 gui looks fun .. i like it
+
+git status// to check if there is any change
+
+git add .// to add changed you already seen
+
+git commit -m " write what you change here" //
+
+git pull origin main// is making your self up to date
+
+git push origin main // is publishing the change you make
+
+git status// to check if it is UpToDate or not 
+
+
+
+gui looks fun .. i like it
