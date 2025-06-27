@@ -9,7 +9,6 @@ public class AccessModifierMainDemo2 extends BankAccount {
 		BankAccount acc = new BankAccount();
 		
 		System.out.println("Account Holder: " + acc.accountHolderName);
-//		System.out.println("Account Branch Code: " +  acc.branchCode);
 //		System.out.println("Account Account Type: " +  acc.accountType);
 		
 	}
