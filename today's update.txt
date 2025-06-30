@@ -1,0 +1,70 @@
+Monday 06 June 2025
+
+
+Difference between a++ and ++a
+Both are increment operators that increase a by 1.
+
+✅ a++ → Post-Increment
+Increments a by 1, but returns the original value before incrementing.
+
+✅ ++a → Pre-Increment
+Increments a by 1, and returns the new incremented value.
+
+🌟 Example for clarity:
+java
+Copy
+Edit
+int a = 5;
+int b;
+
+b = a++;   // post-increment
+✅ What happens:
+
+b gets the current value of a (5).
+
+Then a is incremented to 6.
+
+✅ Result:
+
+a = 6
+
+b = 5
+
+java
+Copy
+Edit
+int a = 5;
+int b;
+
+b = ++a;   // pre-increment
+✅ What happens:
+
+a is first incremented to 6.
+
+Then b gets the new value of a (6).
+
+✅ Result:
+
+a = 6
+
+b = 6
+
+✅ Quick Summary Table:
+Operator	Meaning	Returns	When increment happens
+a++	Post-increment	Old value	After the value is used
+++a	Pre-increment	New value	Before the value is used
+
+🌟 Usage in Expressions:
+Example:
+java
+Copy
+Edit
+int a = 5;
+System.out.println(a++);   // prints 5, then a becomes 6
+System.out.println(++a);   // a becomes 7, then prints 7
+✅ Key Takeaway:
+
+Use ++a when you need the incremented value immediately.
+
+Use a++ when you need the original value before incrementing.
+
