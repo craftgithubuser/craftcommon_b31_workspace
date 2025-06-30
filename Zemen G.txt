@@ -1,0 +1,3 @@
+QA (Quality Assurance) is the process of ensuring a product meets quality standards and works correctly. In software, QA helps prevent bugs, tests functionality, and ensures the final product is reliable and user-friendly.
+
+QA is mostly used by tech teams (testers, developers, product managers) during the software development lifecycle.

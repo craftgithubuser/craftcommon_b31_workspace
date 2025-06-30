@@ -1,0 +1,4 @@
+GitHub is a web-based platform that allows developers to store, manage, and collaborate on code using Git version control.
+
+GitHub = Git (a version control tool) + Hub (a place to collaborate).
+It means a platform for sharing and managing Git projects.

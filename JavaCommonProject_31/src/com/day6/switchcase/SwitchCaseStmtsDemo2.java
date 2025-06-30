@@ -8,7 +8,7 @@ public class SwitchCaseStmtsDemo2 {
 		
 		switch(name) {
 		
-		case "Mango":
+		case "Banana":
 			System.out.println("It's fruit");
 			break;
 		case "Tomato":
