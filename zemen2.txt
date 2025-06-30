@@ -1,0 +1,1 @@
+The purpose of data analysis is to extract useful information from data to support decision-making. It helps identify patterns, trends, and insights that improve understanding, solve problems, and guide strategies in business, science, and many other fields. Data analysis turns raw data into meaningful conclusions.
