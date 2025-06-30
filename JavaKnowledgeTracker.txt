@@ -1,0 +1,117 @@
+package javastudingtracker;
+
+import javax.swing.*;             // For GUI components like JFrame, JPanel, etc.
+import java.awt.*;               // For layout managers and design
+import java.awt.event.*;         // For event handling (e.g., button clicks)
+import java.util.*;              // For data structures like Map, HashMap, etc.
+
+public class JavaKnowledgeTracker extends JFrame {
+
+    // GUI and data structure fields
+    private DefaultListModel<String> topicListModel = new DefaultListModel<>(); // List model for topics
+    private JList<String> topicList = new JList<>(topicListModel);              // GUI list for topics
+    private JComboBox<String> levelComboBox;                                    // Drop-down for selecting knowledge level
+    private JTextArea statusArea;                                               // Text area to show current status
+    private Map<String, String> knowledgeMap = new HashMap<>();                 // Map to store topic -> knowledge level
+
+    /**
+     * 🚀 Constructor Method (Java Constructor)
+     * Initializes the GUI and sets up components.
+     */
+    public JavaKnowledgeTracker() {
+        setTitle("📚 Java Knowledge Tracker");         // Set the title of the window
+        setSize(500, 400);                             // Set window dimensions
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Exit on close
+        setLocationRelativeTo(null);                   // Center the window on screen
+
+        // Predefined list of core Java topics
+        String[] topics = {
+            "Statements", "Labels", "Classes", "Operators", "Methods",
+            "Swing", "Panels", "Interfaces", "Exceptions", "Threads", "Colors"
+        };
+
+        // Load topics into the list model and default map
+        for (String topic : topics) {
+            topicListModel.addElement(topic);           // Add to visual list
+            knowledgeMap.put(topic, "Unrated");         // Default level
+        }
+
+        // Dropdown (ComboBox) for selecting learning level
+        levelComboBox = new JComboBox<>(new String[] {"Beginner", "Intermediate", "Advanced"});
+
+        // Buttons for user interaction
+        JButton updateButton = new JButton("Update Level");
+        JButton addTopicButton = new JButton("Add New Topic");
+
+        // Text area to show learning progress
+        statusArea = new JTextArea(8, 40);
+        statusArea.setEditable(false); // Read-only
+
+        // Top panel containing ComboBox and buttons
+        JPanel topPanel = new JPanel();
+        topPanel.add(new JLabel("Select Level:"));
+        topPanel.add(levelComboBox);
+        topPanel.add(updateButton);
+        topPanel.add(addTopicButton);
+
+        // Add components to the JFrame
+        add(new JScrollPane(topicList), BorderLayout.WEST);      // Left-side topic list
+        add(topPanel, BorderLayout.NORTH);                       // Top panel with buttons
+        add(new JScrollPane(statusArea), BorderLayout.CENTER);   // Center status panel
+
+        // 🔘 Event Listener Method (Lambda for button click)
+        updateButton.addActionListener(e -> updateLevel());
+
+        // 🔘 Event Listener Method (Lambda for button click)
+        addTopicButton.addActionListener(e -> addNewTopic());
+
+        // 🔘 Event Listener Method (List selection change)
+        topicList.addListSelectionListener(e -> displayStatus());
+    }
+
+    /**
+     * 📘 Instance Method
+     * Updates the selected topic with the chosen knowledge level.
+     */
+    private void updateLevel() {
+        String selectedTopic = topicList.getSelectedValue(); // Get currently selected topic
+        if (selectedTopic != null) {
+            String level = (String) levelComboBox.getSelectedItem();  // Get selected level
+            knowledgeMap.put(selectedTopic, level);                   // Update map
+            displayStatus();                                          // Refresh status
+        }
+    }
+
+    /**
+     * 📘 Instance Method
+     * Prompts user to enter a new topic and adds it to the list.
+     */
+    private void addNewTopic() {
+        String newTopic = JOptionPane.showInputDialog(this, "Enter new topic:");  // Prompt input
+        if (newTopic != null && !newTopic.trim().isEmpty()) {
+            topicListModel.addElement(newTopic.trim());           // Add to topic list
+            knowledgeMap.put(newTopic.trim(), "Unrated");         // Default level
+        }
+    }
+
+    /**
+     * 📘 Instance Method
+     * Displays the current knowledge level for all topics in the text area.
+     */
+    private void displayStatus() {
+        StringBuilder sb = new StringBuilder("Knowledge Status:\n");  // Use StringBuilder for efficiency
+        for (int i = 0; i < topicListModel.size(); i++) {
+            String topic = topicListModel.getElementAt(i);
+            sb.append(topic).append(": ").append(knowledgeMap.get(topic)).append("\n");
+        }
+        statusArea.setText(sb.toString());  // Update status area
+    }
+
+    /**
+     * 🚪 Main Method (Java Entry Point)
+     * Starts the application using Swing's event-dispatch thread.
+     */
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new JavaKnowledgeTracker().setVisible(true));
+    }
+}
