@@ -1,0 +1,1 @@
+MuleSoft is a technology company that provides a platform—called Anypoint Platform—for building, connecting, and managing APIs and integrations between different software applications, systems, and data sources, enabling seamless data flow across organizations.
