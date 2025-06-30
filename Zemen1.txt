@@ -1,1 +1,3 @@
 MuleSoft is a technology company that provides a platform—called Anypoint Platform—for building, connecting, and managing APIs and integrations between different software applications, systems, and data sources, enabling seamless data flow across organizations.
+
+MuleSoft is a platform that helps connect different apps, data, and systems through APIs and integrations, making it easier for businesses to share information and automate workflows. Its main product, Anypoint Platform, combines API management and integration tools. MuleSoft was acquired by Salesforce in 2018.
