@@ -1,0 +1,11 @@
+key aspects of version control:
+
+Key Concepts:
+
+* Repository: A central location (local or remote) where all the files and their history are stored. Think of it as a database for your project's versions.
+* Commit: A snapshot of your project at a specific point in time. Each commit includes a timestamp, a message describing the changes, and the modified files.
+* Branch: A parallel version of your repository. Branches allow you to work on new features or bug fixes independently without affecting the main codebase. Once the changes are ready, you can merge the branch back into the main branch.
+* Merge: The process of combining changes from one branch into another.
+* Checkout: Switching between different branches or versions of your project.
+* Push/Pull: Actions for transferring changes between a local repository and a remote repository (like GitHub, GitLab, or Bitbucket). `Push` sends your local commits to the remote, and `Pull` downloads changes from the remote to your local machine.
+* Clone: Creating a copy of a remote repository on your local machine.
