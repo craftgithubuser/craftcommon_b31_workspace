@@ -1,0 +1,1 @@
+For most projects, especially those involving collaboration, Git is the recommended choice. Its flexibility, distributed nature, and large community support make it the industry standard.
