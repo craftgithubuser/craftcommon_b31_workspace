@@ -1,0 +1,5 @@
+Popular Version Control Systems:
+
+* Git: The most widely used distributed version control system. It's incredibly powerful, flexible, and has a vast community and abundant resources. GitHub, GitLab, and Bitbucket are popular platforms that host Git repositories.
+* Subversion (SVN): A centralized version control system. It's simpler than Git but less flexible for complex workflows.
+* Mercurial: Another distributed version control system, similar to Git in functionality but with a different approach.

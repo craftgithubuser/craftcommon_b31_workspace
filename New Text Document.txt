@@ -1,0 +1,16 @@
+ackage com.day4.operator;
+
+public class OperationalOperatoras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a, b;
+a = 20;
+b = (a == 1) ? 30 : 40;
+System.out.println("value of b is :" + b);
+b = ( a == 1) ? 30:40;
+
+System.out.println("value of b is :" + b);
+	}
+
+}
