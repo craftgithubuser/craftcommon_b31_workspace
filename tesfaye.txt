@@ -1,7 +1,7 @@
 hi team 2025 craft
 my third attempt package ProjectCalculator;
 
-import java.util.Scanner;
+import java.util.Scanner;// sample to be corrected
 
 public class Calculator {
 
