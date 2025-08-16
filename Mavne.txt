@@ -1,0 +1,3 @@
+https://maven.apache.org/download.cgi  ///// to download mvn 
+after create the file on desktop open file in cmd then mvn -v next 
+----  mvn archetype:generate -DgroupId=craftsoftware -DartifactId=MavenProject -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
